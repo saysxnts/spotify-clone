@@ -1,0 +1,161 @@
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #b3b3b3;
+    overflow: hidden; /* Previne scroll da página inteira */
+}
+
+a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Layout Principal com CSS GRID */
+.spotify-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Coluna 1 (sidebar) 250px, Coluna 2 (main) o resto */
+    grid-template-rows: 1fr auto; /* Linha 1 (main/sidebar) o resto, Linha 2 (player) automática */
+    grid-template-areas:
+        "sidebar main-content"
+        "music-player music-player";
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar { grid-area: sidebar; background-color: #000; padding: 24px; }
+.main-content { grid-area: main-content; background: linear-gradient(to bottom, #222, #121212); overflow-y: auto; }
+.music-player { grid-area: music-player; background-color: #181818; border-top: 1px solid #282828; }
+
+/* Estilos da Barra Lateral (Sidebar) */
+.sidebar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.sidebar .logo i {
+    margin-right: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.sidebar .divider {
+    height: 1px;
+    background-color: #282828;
+    margin: 10px 0;
+}
+
+.sidebar .playlists {
+    font-size: 0.8em;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+/* Estilos do Conteúdo Principal */
+.main-content {
+    padding: 24px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-nav .nav-btn {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile-btn {
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.content-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #181818;
+    padding: 16px;
+    border-radius: 8px;
+    height: 250px; /* Apenas para visualização */
+}
+
+/* Estilos do Player de Música */
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.player-controls .control-icon {
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.player-controls .play-icon {
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.player-controls .play-icon:hover {
+    transform: scale(1.1);
+    color: #fff;
+}

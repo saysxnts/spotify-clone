@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone do Spotify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="spotify-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fab fa-spotify"></i> Spotify
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#"><i class="fas fa-search"></i> Buscar</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Sua Biblioteca</a></li>
+            </ul>
+            <ul class="playlist-menu">
+                <li><a href="#"><i class="fas fa-plus-square"></i> Criar playlist</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> Músicas Curtidas</a></li>
+            </ul>
+            <div class="divider"></div>
+            <div class="playlists">
+                <p>MINHA PLAYLIST 1</p>
+                <p>ROCK ANOS 90</p>
+                </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-nav">
+                    <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <button class="profile-btn">Guilherme</button>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <h2>Seus mixes mais ouvidos</h2>
+                <div class="grid-cards">
+                    <div class="card">Card 1</div>
+                    <div class="card">Card 2</div>
+                    <div class="card">Card 3</div>
+                    <div class="card">Card 4</div>
+                    <div class="card">Card 5</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="music-player">
+            <div class="song-info">
+                </div>
+            <div class="player-controls">
+                <i class="fas fa-random control-icon"></i>
+                <i class="fas fa-step-backward control-icon"></i>
+                <i class="fas fa-play-circle play-icon"></i>
+                <i class="fas fa-step-forward control-icon"></i>
+                <i class="fas fa-redo control-icon"></i>
+            </div>
+            <div class="volume-controls">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
